@@ -1,5 +1,5 @@
 import { FormControl, FormHelperText, InputLabel, makeStyles, NativeSelect } from '@material-ui/core'
-import { theme } from 'highcharts';
+// import theme from 'highcharts';
 import React from 'react'
 
 
@@ -24,9 +24,9 @@ export default function CountrySelector({ value, handleOnChange, countries }) {
                     id: 'country-selector'
                 }}
             >
-                {countries.map((country) => {
+                {countries.map((country, index) => {
                     return (
-                        <option value={country.ISO2.toLowerCase()}>
+                        <option key={index} value={country.ISO2.toLowerCase()}>
                             {country.Country}
                         </option>
                     )
